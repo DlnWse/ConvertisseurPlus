@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="447.0" prefWidth="688.0" spacing="20.0" style="-fx-background-color: #555;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.dylan.convertisseurpro.ConvertProController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Currency Converter" textFill="WHITE">
+         <font>
+            <Font name="Ebrima" size="39.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="tfInput" maxHeight="50.0" maxWidth="250.0" prefHeight="30.0" prefWidth="418.0" style="-fx-border-color: dimgrey; -fx-border-style: solid; -fx-border-width: 3px;" />
+            <Label fx:id="lblMoney" text="€" textFill="WHITE">
+               <font>
+                  <Font size="35.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="301.0">
+         <children>
+            <ComboBox fx:id="cbLeft" minWidth="150.0" onAction="#onComboAction" prefWidth="150.0" style="-fx-background-color: #B9B9B9;">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin>
+            </ComboBox>
+            <ComboBox fx:id="cbRight" minWidth="150.0" prefWidth="150.0" style="-fx-background-color: #B9B9B9;">
+               <HBox.margin>
+                  <Insets left="100.0" right="100.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <Label fx:id="lblResult" text="Result" textFill="WHITE">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" maxWidth="350.0" prefHeight="45.0" prefWidth="551.0">
+         <children>
+            <Button fx:id="btnConvert" maxWidth="200.0" mnemonicParsing="false" onAction="#onConvertAction" prefHeight="200.0" style="-fx-background-color: green;" text="Convert" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnClear" maxWidth="200.0" mnemonicParsing="false" onAction="#onClearAction" prefHeight="200.0" style="-fx-background-color: orange; -fx-border-width: 0;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
